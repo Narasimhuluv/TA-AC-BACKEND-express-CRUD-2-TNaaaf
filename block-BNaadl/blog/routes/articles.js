@@ -55,4 +55,22 @@ router.get("/:id/delete", (req,res)=> {
     res.redirect("/articles")
   })
 })
+
+
+// increament and decreament
+router.get("/:id/likes", (req,res) => {
+  let id = req.params.id;
+  Article.findByIdAndUpdate(id,{$inc : {likes : 1}},{$dec :{likes : -1}}, (err,article) => {
+    if(err) return next(err)
+    res.redirect("/articles/" + id)
+  })
+})
+
+router.get("/:id/dislikes", (req,res) => {
+  let id = req.params.id;
+  Article.findByIdAndUpdate(id,{$inc :{likes : -1}}, (err,article) => {
+    if(err) return next(err)
+    res.redirect("/articles/" + id)
+  })
+})
 module.exports = router;

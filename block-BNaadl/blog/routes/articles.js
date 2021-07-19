@@ -55,5 +55,4 @@ router.get("/:id/delete", (req,res)=> {
     res.redirect("/articles")
   })
 })
-
 module.exports = router;

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+    <form action="/articles/<%=articles.id%>" method="POST" class="w-3/12 border-2"> 
+        <input  type="text" name="title" value="<%= articles.title%>">
+        <input  type="text" name="description" value="<%= articles.description%>">
+        <input  type="text" name="tags" value="<%= articles.tags%>">
+        <input  type="text" name="author" value="<%= articles.author%>">
+        <input  type="number" name="likes" value="<%= articles.likes%>">
+        <input  type="submit">
+    </form>
+</body>
+</html>

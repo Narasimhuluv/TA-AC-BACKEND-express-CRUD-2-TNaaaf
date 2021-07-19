@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+    <header class="w-full border-2 shadow-sm mb-3 py-5">
+        <a class="block text-center text-xl" href="/">Go To Home page</a>
+        <!-- <a class="block text-center text-2xl mt-3" href="/articles/new">Add articles</a> -->
+        <a class="text-2xl block w-2/12 border-2 py-2 m-auto mt-5 text-center" href="/articles/new"> Add New Article</a>
+    </header>
+    <section class="flex flex-wrap">
+        <% articles.forEach((article) => {%>
+            <div class="w-2/12 border-2 p-4 m-6  text-center">
+                <h2><%= article.title%></h2>
+                <a  href="/articles/<%=article.id%>">
+                    <button class="border-2 hover:bg-red-400 transition-all m-auto p-1 px-2 block mt-5">Each Article</button>
+                </a>
+            </div>
+        <%})%>
+    </section>
+</body>
+</html>

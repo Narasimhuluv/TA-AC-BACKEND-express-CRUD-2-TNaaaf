@@ -14,12 +14,20 @@
         <a class="block text-center text-2xl mt-3" href="/articles">list of articles</a>
     </header>
     <section>
-        <div class="w-2/12 border-2 p-5 text-center">
+        <div class="w-3/12 border-2 p-5 text-center">
             <h2><%= articles.title%></h2>
             <h3><%= articles.description%></h3>
             <h4><%= articles.tags%></h4>
             <h5><%= articles.author%></h5>
-            <h6><%= articles.likes%></h6>
+            <h6><%= articles.likes ? articles.likes : 0 %></h6>
+
+            <a href="/articles/<%=articles.id%>/likes">
+                <button class="border-2 p-1 px-6">Like</button>
+            </a>
+
+            <a href="/articles/<%=articles.id%>/dislikes">
+                <button class="border-2 p-1 px-6">dislike</button>
+            </a>
 
             <a href="/articles/<%=articles.id%>/edit">
                 <button class="border-2 p-1 px-6">Edit</button>

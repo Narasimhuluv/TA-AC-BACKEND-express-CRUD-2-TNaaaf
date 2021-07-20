@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <header class="border-2 p-12 w-full">
+        <div class="w-full flex justify-between">
+          <a class="block font-bold" href="/articles">List of All Articles</a>
+          <a class="block font-bold" href="/articles/new">Add Article</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="comments">
+                <form action="/comments/<%=comments.id%>" method="POST">
+                    <textarea class="block border-green-600 border-2 mt-4 p-2" name="content" id="" cols="40" placeholder="Message..." rows="6"><%=comments.content%></textarea>
+                    <input class="mt-3  bg-green-600 rounded-md text-white py-1 px-4" type="submit">
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+</head>
+<body>
+    <header class="border-2 p-12 w-full">
+        <div class="w-full flex justify-between">
+          <a class="block font-bold" href="/articles">List of All Articles</a>
+          <a class="block font-bold" href="/">Back</a>
+        </div>
+    </header>
+
+
+    <form action="/articles" method="POST" class="w-4/12 rounded-md shadow-md  border-2 p-6 m-auto mt-10" >
+        <h2 class="text-center text-2xl font-bold">Submit the Article</h2>
+        <input class="w-full outline-none focus:border-green-700 rounded-md p-2 mt-5 border-2" type="text" name="title" placeholder="Enter the Title">
+        <input class="w-full outline-none focus:border-green-700 rounded-md p-2 mt-5 border-2" type="text" name="author" placeholder="Enter the Author">
+        <textarea class="w-full outline-none focus:border-green-700 rounded-md p-2 mt-5 border-2" name="description" id="" cols="30" rows="10" placeholder="Enter the Description of subject"></textarea>
+        <input class="w-full outline-none focus:border-green-700 rounded-md p-2 mt-5 border-2" type="number" name="likes" placeholder="How many Likes">
+        <input class="w-full outline-none focus:border-green-700 rounded-md p-2 mt-5 border-2" type="submit">
+    </form>
+</body>
+</html>

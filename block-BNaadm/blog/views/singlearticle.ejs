@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <script src="https://kit.fontawesome.com/17bbe460ec.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="border-2 p-12 w-full">
+        <div class="w-full flex justify-between">
+          <a class="block font-bold" href="/articles/new">Add New Article</a>
+          <a class="block font-bold" href="/articles">Back</a>
+        </div>
+    </header>
+   <main>
+    <section class="m-10">
+        <h2 class="text-2xl text-red-400 font-bold mt-4"><%=articles.title%></h2>
+        <h3 class="text-xl text-green-400 font-bold mt-4"><%=articles.author%></h3>
+        <p class="text-lg text-gray-600 mt-4"><%=articles.description%></p>
+        <p class="mt-4">Likes <%=articles.likes ? articles.likes : 0 %></p>
+
+        <div class="mt-4">
+            <a href="/articles/<%=articles.id%>/likes">
+                <button><i class="fas fa-thumbs-up  text-green-800 mr-3 ml-3 text-xl"></i></button>
+            </a>
+            <a href="/articles/<%=articles.id%>/dislikes">
+                <button><i class="fas fa-thumbs-down  text-red-800 mr-3 ml-3 text-xl"></i></button>
+            </a>
+        </div>
+
+
+        <div class="flex">
+            <a href="/articles/<%=articles.id%>/edit" class="mt-4 block">
+                <button class="border-2 py-1 px-4 bg-green-500 text-white rounded-t-md">Edit</button>
+            </a>
+    
+            <a href="/articles/<%=articles.id%>/delete" class="mt-4 ml-3 block">
+                <button class="border-2 py-1 px-4 text-white bg-red-500 rounded-md">Delete</button>
+            </a>
+        </div>
+
+
+        <!-- comments aDd -->
+
+        <div class="comments">
+            <form action="/articles/<%=articles.id%>/comments" method="POST">
+                <textarea class="block border-green-600 border-2 mt-4 p-2" name="content" id="" cols="40" placeholder="Message..." rows="6"></textarea>
+                <input class="mt-3  bg-green-600 rounded-md text-white py-1 px-4" type="submit">
+            </form>
+        </div>
+
+        <div class="allcommentsData">
+            <h2 class="mt-8">Comments...</h2>
+            <% comments.forEach((comment) => {%>
+                <div class="mt-8">
+                    <p class="mt-4 bg-green-100 py-1 px-6 inline-block"><%= comment.content%></p>
+                    
+                    <div class="flex">
+                        <a href="/comments/<%=comment.id%>/edit" class="mt-4 block">
+                            <button class="border-2 py-1 px-4 bg-green-500 text-white rounded-t-md">Edit</button>
+                        </a>
+                
+                        <a href="/comments/<%=comment.id%>/delete" class="mt-4 ml-3 block">
+                            <button class="border-2 py-1 px-4 text-white bg-red-500 rounded-md">Delete</button>
+                        </a>
+                    </div>
+                </div>
+            <%})%>
+        </div>
+
+
+
+    </section>
+   </main>
+</body>
+</html>

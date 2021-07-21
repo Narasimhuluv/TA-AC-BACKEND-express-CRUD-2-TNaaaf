@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 <body>
     <header class="border-2 p-12 w-full">
@@ -16,7 +16,7 @@
     </header>
 
     <main>
-        <section>
+        <section class="m-6">
             <div class="comments">
                 <form action="/comments/<%=comments.id%>" method="POST">
                     <textarea class="block border-green-600 border-2 mt-4 p-2" name="content" id="" cols="40" placeholder="Message..." rows="6"><%=comments.content%></textarea>

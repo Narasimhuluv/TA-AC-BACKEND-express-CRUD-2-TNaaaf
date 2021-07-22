@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header class="p-8 border-2">
+        <div class="flex justify-between">
+          <a class="text-xl border-2 px-4 py-1 rounded-xl bg-gray-600 text-white" href="/books">List of Books</a>
+          <a class="text-xl border-2 px-4 py-1 bg-green-500 text-white rounded-xl" href="/books">Back</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <form action="/books" method="POST" class="w-4/12 border-2 p-3 py-16 rounded-xl m-auto mt-12">
+                <h2 class="text-center text-2xl">Add Book</h2>
+                <input type="text" name="title" placeholder="Enter The Book Title" class="w-full border-2 p-2 mt-4 rounded-xl outline-none focus:border-green-600">
+                <input type="text" name="summery" placeholder="Enter The Book Summery" class="w-full border-2 p-2 mt-4 rounded-xl outline-none focus:border-green-600">
+                <input type="number" name="pages" placeholder="Enter the Number of Pages" class="w-full border-2 p-2 mt-4 rounded-xl outline-none focus:border-green-600">
+                <input type="text" name="publication" placeholder="Enter the Publication" class="w-full border-2 p-2 mt-4 rounded-xl outline-none focus:border-green-600">
+                <input type="text" name="coverImage" placeholder="Enter the image URl" class="w-full border-2 p-2 mt-4 rounded-xl outline-none focus:border-green-600">
+
+
+                <input type="text" name="name" placeholder="Enter the Author" class="w-full border-2 p-2 mt-4 rounded-xl outline-none focus:border-green-600">
+                <input type="text" name="email" placeholder="Enter the Email" class="w-full border-2 p-2 mt-4 rounded-xl outline-none focus:border-green-600">
+                <input type="text" name="country" placeholder="Enter the country" class="w-full border-2 p-2 mt-4 rounded-xl outline-none focus:border-green-600">
+
+
+                <input type="submit" class="w-full border-2 p-2 mt-4 rounded-xl outline-none focus:border-green-600">
+            </form>
+        </section>
+    </main>
+</body>
+</html>

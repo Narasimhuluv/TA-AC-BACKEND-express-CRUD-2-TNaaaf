@@ -1,7 +1,6 @@
 writeCode
 
 Q. Create an Online bookstore where you can display a list of books.
-
 1. Each book can have fields:-
 
 - title

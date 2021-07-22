@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>single Book</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <header class="p-8 border-2">
+        <div class="flex justify-between">
+          <a class="text-xl border-2 px-4 py-1 rounded-xl bg-gray-600 text-white" href="/books">List of Books</a>
+          <a class="text-xl border-2 px-4 py-1 bg-green-500 text-white rounded-xl" href="/books/new">Add Book</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="m-10">
+            <div class="mt-6">
+                <img src="<%=books.coverImage%>" alt="cover image" class="w-2/12">
+                <h2 class="text-2xl text-green-500 mt-4"><strong class="text-gray-600">Title :</strong> <%=books.title%></h2>
+                <h3 class="text-xl text-green-500 mt-4"><strong class="text-gray-600">Pages : </strong><%=books.pages%></h3>
+                <h3 class="text-xl text-green-500 mt-4"><strong class="text-gray-600">Summery : </strong><%=books.summery%></h3>
+                <h3 class="text-xl text-green-500 mt-4"><strong class="text-gray-600">Publication : </strong><%=books.publication%></h3>
+            </div>
+        </section>
+
+
+        <!-- update and delete  -->
+
+        <section class="m-10">
+            <div class="">
+                <a href="/books/<%=books.id%>/edit">
+                    <button class="border-2 px-4 py-1 bg-green-600 rounded-xl text-white mr-3">Update</button>
+                </a>
+                <a href="/books/<%=books.id%>/delete">
+                    <button class="border-2 px-4 py-1 bg-red-600 rounded-xl text-white ">Delete</button>
+                </a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
